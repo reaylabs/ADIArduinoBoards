@@ -1,0 +1,78 @@
+{
+  "packages":
+  [
+    {
+      "name": "ADIInstrument",
+      "maintainer": "Analog Devices",
+      "websiteURL": "https://analog.com",
+      "email" : "bob.reay@analog.com",
+      "platforms":
+      [
+        {
+          "name": "ADI Arduino Boards",
+          "architecture": "samd",
+          "version": "1.0",
+          "category": "Contributed",
+          "url": "https://github.com/reaylabs/ADIArduinoBoards/blob/main/CustomBoards/adi-1.0.zip?raw=true",
+          "archiveFileName": "adi-1.0.zip",
+          "checksum": "SHA-256:af35a7cf0a0d548bf05b99bf755a147bc60169c0bf2e62eb3f24a507b8a67d3a",
+          "size": "2244014",
+          "help": {
+            "online": "https://analog.com"
+          },
+          "boards": [
+            {
+              "name": "ADIInstrument"
+            },
+            {
+              "name": "RL2000"
+            },
+            {
+              "name": "CompProbe"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "adafruit",
+              "name": "arm-none-eabi-gcc",
+              "version": "9-2019q4"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.7.0-arduino3"
+            },
+            {
+              "packager": "adafruit",
+              "name": "bossac",
+              "version": "1.8.0-48-gb176eee"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.10.0-arduino7"
+            },
+            {
+              "packager": "adafruit",
+              "name": "CMSIS",
+              "version": "5.4.0"
+            },
+            {
+              "packager": "adafruit",
+              "name": "CMSIS-Atmel",
+              "version": "1.2.2"
+            },
+            {
+              "packager": "arduino",
+              "name": "arduinoOTA",
+              "version": "1.2.1"
+            }
+          ]
+        }
+      ],
+      "tools":
+      [
+      ]
+    }
+  ]
+}

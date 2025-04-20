@@ -1,0 +1,181 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.cache=Cache
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.maxqspi=Max QSPI
+menu.usbstack=USB Stack
+menu.debug=Debug
+
+# -----------------------------------
+# ADIInstrument (SAMD21)
+# -----------------------------------
+reaylabs_ADIInstrument.name=ADIInstrument (SAMD21)
+
+# https://pid.codes
+reaylabs_ADIInstrument.vid.0=0x1209
+reaylabs_ADIInstrument.pid.0=0x2054
+
+# Upload
+reaylabs_ADIInstrument.upload.tool=bossac18
+reaylabs_ADIInstrument.upload.protocol=sam-ba
+reaylabs_ADIInstrument.upload.maximum_size=262144
+reaylabs_ADIInstrument.upload.offset=0x2000
+reaylabs_ADIInstrument.upload.use_1200bps_touch=true
+reaylabs_ADIInstrument.upload.wait_for_upload_port=true
+reaylabs_ADIInstrument.upload.native_usb=true
+
+# Build
+reaylabs_ADIInstrument.build.mcu=cortex-m0plus
+reaylabs_ADIInstrument.build.f_cpu=48000000L
+reaylabs_ADIInstrument.build.usb_product="ADIInstrument"
+reaylabs_ADIInstrument.build.usb_manufacturer="Analog Devices"
+reaylabs_ADIInstrument.build.board=ADIInstrument
+reaylabs_ADIInstrument.build.core=arduino
+reaylabs_ADIInstrument.build.extra_flags=-D__SAMD21G18A__ -DCRYSTALLESS -DADAFRUIT_ITSYBITSY_M0 -DARM_MATH_CM0PLUS {build.usb_flags}
+reaylabs_ADIInstrument.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+reaylabs_ADIInstrument.build.openocdscript=openocd_scripts/itsybitsy_m0.cfg
+reaylabs_ADIInstrument.build.variant=itsybitsy_m0
+reaylabs_ADIInstrument.build.variant_system_lib=
+reaylabs_ADIInstrument.build.vid=0x1209
+reaylabs_ADIInstrument.build.pid=0x2054
+reaylabs_ADIInstrument.bootloader.tool=openocd
+reaylabs_ADIInstrument.bootloader.file=ADIInstrument/bootloader-adi_instrument-cbdf657-dirty.bin
+
+# Menu
+reaylabs_ADIInstrument.menu.opt.small=Small (-Os) (standard)
+reaylabs_ADIInstrument.menu.opt.small.build.flags.optimize=-Os
+reaylabs_ADIInstrument.menu.opt.fast=Fast (-O2)
+reaylabs_ADIInstrument.menu.opt.fast.build.flags.optimize=-O2
+reaylabs_ADIInstrument.menu.opt.faster=Faster (-O3)
+reaylabs_ADIInstrument.menu.opt.faster.build.flags.optimize=-O3
+reaylabs_ADIInstrument.menu.opt.fastest=Fastest (-Ofast)
+reaylabs_ADIInstrument.menu.opt.fastest.build.flags.optimize=-Ofast
+reaylabs_ADIInstrument.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+reaylabs_ADIInstrument.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+reaylabs_ADIInstrument.menu.usbstack.arduino=Arduino
+reaylabs_ADIInstrument.menu.usbstack.tinyusb=TinyUSB
+reaylabs_ADIInstrument.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+reaylabs_ADIInstrument.menu.debug.off=Off
+reaylabs_ADIInstrument.menu.debug.on=On
+reaylabs_ADIInstrument.menu.debug.on.build.flags.debug=-g
+
+# -----------------------------------
+# RL2000 (SAMD21)
+# -----------------------------------
+reaylabs_rl2000.name=RL2000 (SAMD21)
+
+# https://pid.codes
+reaylabs_rl2000.vid.0=0x1209
+reaylabs_rl2000.pid.0=0x2051
+
+# Upload
+reaylabs_rl2000.upload.tool=bossac18
+reaylabs_rl2000.upload.protocol=sam-ba
+reaylabs_rl2000.upload.maximum_size=262144
+reaylabs_rl2000.upload.offset=0x2000
+reaylabs_rl2000.upload.use_1200bps_touch=true
+reaylabs_rl2000.upload.wait_for_upload_port=true
+reaylabs_rl2000.upload.native_usb=true
+
+# Build
+reaylabs_rl2000.build.mcu=cortex-m0plus
+reaylabs_rl2000.build.f_cpu=48000000L
+reaylabs_rl2000.build.usb_product="RL2000"
+reaylabs_rl2000.build.usb_manufacturer="Analog Devices"
+reaylabs_rl2000.build.board=RL2000
+reaylabs_rl2000.build.core=arduino
+reaylabs_rl2000.build.extra_flags=-D__SAMD21G18A__ -DCRYSTALLESS -DADAFRUIT_ITSYBITSY_M0 -DARM_MATH_CM0PLUS {build.usb_flags}
+reaylabs_rl2000.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+reaylabs_rl2000.build.openocdscript=openocd_scripts/itsybitsy_m0.cfg
+reaylabs_rl2000.build.variant=itsybitsy_m0
+reaylabs_rl2000.build.variant_system_lib=
+reaylabs_rl2000.build.vid=0x1209
+reaylabs_rl2000.build.pid=0x2051
+reaylabs_rl2000.bootloader.tool=openocd
+reaylabs_rl2000.bootloader.file=RL2000/bootloader-rl2000-7fd43a1.bin
+
+# Menu
+reaylabs_rl2000.menu.opt.small=Small (-Os) (standard)
+reaylabs_rl2000.menu.opt.small.build.flags.optimize=-Os
+reaylabs_rl2000.menu.opt.fast=Fast (-O2)
+reaylabs_rl2000.menu.opt.fast.build.flags.optimize=-O2
+reaylabs_rl2000.menu.opt.faster=Faster (-O3)
+reaylabs_rl2000.menu.opt.faster.build.flags.optimize=-O3
+reaylabs_rl2000.menu.opt.fastest=Fastest (-Ofast)
+reaylabs_rl2000.menu.opt.fastest.build.flags.optimize=-Ofast
+reaylabs_rl2000.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+reaylabs_rl2000.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+reaylabs_rl2000.menu.usbstack.arduino=Arduino
+reaylabs_rl2000.menu.usbstack.tinyusb=TinyUSB
+reaylabs_rl2000.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+reaylabs_rl2000.menu.debug.off=Off
+reaylabs_rl2000.menu.debug.on=On
+reaylabs_rl2000.menu.debug.on.build.flags.debug=-g
+
+# -----------------------------------
+# CompProbe (SAMD21)
+# -----------------------------------
+reaylabs_CompProbe.name=CompProbe (SAMD21)
+
+# https://pid.codes
+reaylabs_CompProbe.vid.0=0x1209
+reaylabs_CompProbe.pid.0=0x2053
+
+# Upload
+reaylabs_CompProbe.upload.tool=bossac18
+reaylabs_CompProbe.upload.protocol=sam-ba
+reaylabs_CompProbe.upload.maximum_size=262144
+reaylabs_CompProbe.upload.offset=0x2000
+reaylabs_CompProbe.upload.use_1200bps_touch=true
+reaylabs_CompProbe.upload.wait_for_upload_port=true
+reaylabs_CompProbe.upload.native_usb=true
+
+# Build
+reaylabs_CompProbe.build.mcu=cortex-m0plus
+reaylabs_CompProbe.build.f_cpu=48000000L
+reaylabs_CompProbe.build.usb_product="CompProbe"
+reaylabs_CompProbe.build.usb_manufacturer="Analog Devices"
+reaylabs_CompProbe.build.board=CompProbe
+reaylabs_CompProbe.build.core=arduino
+reaylabs_CompProbe.build.extra_flags=-D__SAMD21G18A__ -DCRYSTALLESS -DADAFRUIT_ITSYBITSY_M0 -DARM_MATH_CM0PLUS {build.usb_flags}
+reaylabs_CompProbe.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+reaylabs_CompProbe.build.openocdscript=openocd_scripts/itsybitsy_m0.cfg
+reaylabs_CompProbe.build.variant=itsybitsy_m0
+reaylabs_CompProbe.build.variant_system_lib=
+reaylabs_CompProbe.build.vid=0x1209
+reaylabs_CompProbe.build.pid=0x2053
+reaylabs_CompProbe.bootloader.tool=openocd
+reaylabs_CompProbe.bootloader.file=CompProbe/bootloader-comp_probe-cbdf657-dirty.bin
+
+# Menu
+reaylabs_CompProbe.menu.opt.small=Small (-Os) (standard)
+reaylabs_CompProbe.menu.opt.small.build.flags.optimize=-Os
+reaylabs_CompProbe.menu.opt.fast=Fast (-O2)
+reaylabs_CompProbe.menu.opt.fast.build.flags.optimize=-O2
+reaylabs_CompProbe.menu.opt.faster=Faster (-O3)
+reaylabs_CompProbe.menu.opt.faster.build.flags.optimize=-O3
+reaylabs_CompProbe.menu.opt.fastest=Fastest (-Ofast)
+reaylabs_CompProbe.menu.opt.fastest.build.flags.optimize=-Ofast
+reaylabs_CompProbe.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+reaylabs_CompProbe.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+reaylabs_CompProbe.menu.usbstack.arduino=Arduino
+reaylabs_CompProbe.menu.usbstack.tinyusb=TinyUSB
+reaylabs_CompProbe.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+reaylabs_CompProbe.menu.debug.off=Off
+reaylabs_CompProbe.menu.debug.on=On
+reaylabs_CompProbe.menu.debug.on.build.flags.debug=-g

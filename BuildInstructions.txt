@@ -1,0 +1,10 @@
+#MAC build instrucations 5-20-23
+1. Add new board to the variant folder
+2. Update the boards.txt file with the new board definition
+3. Add the new bootloader to the bootloader directory
+4. Update the high level README.md file with the updates
+5. ZIP the ReayLabs-xxx folder on the Windows virtual machine. Using the MAC will create a high level _MAC hidden folder.
+6. Get the ZIP file size using the MAC finder.
+7. Get the checksum for the ZIP file in the terminal using the command: shasum -a 256 ReayLabs-1.0.0.zip
+8. Add the new board name, ZIP checksum, ZIP filesize, and revision.
+9. Update to Github
