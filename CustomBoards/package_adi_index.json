@@ -11,10 +11,10 @@
         {
           "name": "ADI Arduino Boards",
           "architecture": "samd",
-          "version": "1.0",
+          "version": "1.0.1",
           "category": "Contributed",
-          "url": "https://github.com/reaylabs/ADIArduinoBoards/blob/main/CustomBoards/adi-1.0.zip?raw=true",
-          "archiveFileName": "adi-1.0.zip",
+          "url": "https://github.com/reaylabs/ADIArduinoBoards/blob/main/CustomBoards/adi-1.0.1.zip?raw=true",
+          "archiveFileName": "adi-1.0.1.zip",
           "checksum": "SHA-256:af35a7cf0a0d548bf05b99bf755a147bc60169c0bf2e62eb3f24a507b8a67d3a",
           "size": "2244014",
           "help": {
